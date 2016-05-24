@@ -1,0 +1,25 @@
+body {
+    background: black;
+    padding: 20px;
+}
+.filter-contain {
+    text-align: center;
+}
+
+.filter {
+    background: black;
+    color: hotpink;
+    width: 80%;
+    text-align: center;
+    border: none;
+}
+
+.quotes {
+    text-align: center;
+    margin-top: 10px;
+    color: hotpink
+}
+.contain {
+    text-align: center;
+    margin-top: 10px;
+}

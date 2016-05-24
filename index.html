@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html ng-app='quoteBook'>
+
+<head>
+    
+    <title>QuoteBook</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    
+</head>
+    
+<body ng-controller='mainCtrl'>
+    <div class="filter-contain">
+        <input class="filter" ng-model="filt" placeholder="Search a Quote..."/>
+    </div>
+        
+    <div ng-repeat="quote in quotes | filter: {text: filt}">
+        <div class="quotes"> "{{ quote.text }}" -{{quote.author}}</div>
+    </div>
+    
+    <div class="contain">
+        <input class="add-input filter" placeholder='Quote to Add...' ng-model='quoteToBe'/>
+        <input class="add-input filter" placeholder='Author to Add...' ng-model='authorToBe'/>
+        <button class="add-quote" ng-click='getAdd()'>ADD</button>
+        <input class="remove-input filter" placeholder='Quote to Remove...' ng-model="textToDelete"/>
+        <button class="remove-quote" ng-click='getRemove'>Remove</button>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/mainCtrl.js"></script>
+    <script src="js/service.js"></script>
+       
+</body>
+
+</html>
